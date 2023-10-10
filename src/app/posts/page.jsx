@@ -4,6 +4,12 @@ const Posts = async () => {
 
     const response = await fetch('https://jsonplaceholder.typicode.com/posts', { next: { revalidate: 60, }, })
     const posts = await response.json();
+    
+    await new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve()
+        },2000)
+    })
 
     const postsJSX = posts.map((post) => {
 

@@ -1,4 +1,4 @@
-import { data } from "autoprefixer"
+
 
 
 export default  function Home() {
